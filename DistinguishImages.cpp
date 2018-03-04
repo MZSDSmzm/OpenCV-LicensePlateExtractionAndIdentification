@@ -25,6 +25,14 @@ int main()
 	cvtColor(bilateralFilterSrc, src_gray, CV_BGR2GRAY);
 	imshow("src_gray", src_gray);
 	
+	//灰度直方图均衡化
+	//equalizeHist(src_gray, src_gray);
+	//imshow("equalizeHist", src_gray);
+
+	//腐蚀与膨胀
+	//erode(src_gray, src_gray, Mat(1, 1, CV_8U), Point(-1, -1),1);
+	//dilate(src_gray, src_gray, Mat(5, 5, CV_8U), Point(-1, -1), 1);
+	//morphologyEx(src_gray, src_gray, MORPH_OPEN, Mat(2, 2, CV_8U), Point(-1, -1), 1);
 	
 	waitKey();
 	return 0;

@@ -14,8 +14,7 @@ int main()
 	Mat src = imread("C:\\text.jpg");
 	if (!src.data) {
 		return 0;
-	}
-	
+	}	
 	Mat bilateralFilterSrc;
 	//双边滤波处理
 	bilateralFilter(src, bilateralFilterSrc, 25, 25 * 2, 25 / 2);
@@ -37,7 +36,7 @@ int main()
 	imshow("dilate", src_gray);
 	//得到二值图像
 	threshold(src_gray, src_gray, 160, 255, THRESH_BINARY);
-	
+	//imshow("threshold", src_gray);
 	waitKey();
 	return 0;
 }

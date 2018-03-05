@@ -35,6 +35,8 @@ int main()
 	//morphologyEx(src_gray, src_gray, MORPH_OPEN, Mat(2, 2, CV_8U), Point(-1, -1), 1);
 	morphologyEx(src_gray, src_gray, MORPH_CLOSE, Mat(2, 2, CV_8U), Point(-1, -1), 1);
 	imshow("dilate", src_gray);
+	//得到二值图像
+	threshold(src_gray, src_gray, 160, 255, THRESH_BINARY);
 	
 	waitKey();
 	return 0;

@@ -32,7 +32,7 @@ int main()
 	//erode(src_gray, src_gray, Mat(1, 1, CV_8U), Point(-1, -1),1);
 	//dilate(src_gray, src_gray, Mat(5, 5, CV_8U), Point(-1, -1), 1);
 	//morphologyEx(src_gray, src_gray, MORPH_OPEN, Mat(2, 2, CV_8U), Point(-1, -1), 1);
-	morphologyEx(src_gray, src_gray, MORPH_CLOSE, Mat(2, 2, CV_8U), Point(-1, -1), 1);
+	//morphologyEx(src_gray, src_gray, MORPH_CLOSE, Mat(2, 2, CV_8U), Point(-1, -1), 1);
 	imshow("dilate", src_gray);
 	//得到二值图像
 	threshold(src_gray, src_gray, 160, 255, THRESH_BINARY);

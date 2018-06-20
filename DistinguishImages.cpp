@@ -37,6 +37,13 @@ int main()
 	//得到二值图像
 	threshold(src_gray, src_gray, 160, 255, THRESH_BINARY);
 	imshow("threshold", src_gray);
+	
+	Mat threshold_output;
+	vector<vector<Point>> contours;
+	vector<Vec4i> hierarchy;
+	Canny(src_gray, threshold_output, 150, 350);
+	//dilate(threshold_output, threshold_output, Mat(2, 2, CV_8U), Point(-1, -1), 1);
+	imshow("边缘检测", threshold_output);
 	waitKey();
 	return 0;
 }
